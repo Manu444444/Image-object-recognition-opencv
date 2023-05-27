@@ -1,0 +1,25 @@
+________OBJECT RECOGNITION__________
+//Use GOOGLE COLAB for code execution 
+//import and install necessary pip's and libraries to make sure it runs successfully
+//create a folder with image or import the necessary images you want it to detect
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+pip install cvlib
+import cvlib as cv
+from cvlib.object_detection import draw_bbox
+from numpy.lib.polynomial import poly
+
+//main code for object detection
+image = cv2.imread("apple2.jpg")
+plt.imshow(image)
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+box, label, count = cv.detect_common_objects(image)
+output = draw_bbox(image, box, label, count)
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.imshow(image)
+plt.show()
+
+//Thankyou
